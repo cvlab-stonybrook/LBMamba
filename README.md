@@ -29,7 +29,7 @@ Required packages:
   $ mim install mmdet
   $ pip install tensorboard
 ``` 
-The ```mamba-1p1p1``` is located in the [Vim](https://github.com/hustvl/Vim) project. We also provide the output of ```conda list``` and ```pip list``` of our environment in the [env](env) directory for reference.
+The ```mamba-1p1p1``` is located in the [Vim](https://github.com/hustvl/Vim) project. We also provide the output of ```conda list``` and ```pip list``` of our environment in the [env_list](env_list) directory for reference.
 
 ## Build LBMamba CUDA kernel
 We use CMake to build our CUDA kernel. Please replace the ```-DPython_ROOT_DIR="/home/jzhang/Dev/anaconda3_2023/envs/vim"``` in ```LBMamba_kernel/build.sh``` with your python root directory. E.g. if you use conda environment and your python is located at ```/home/jzhang/Dev/anaconda3_2023/envs/vim/bin/python```, you should set ```-DPython_ROOT_DIR="/home/jzhang/Dev/anaconda3_2023/envs/vim"```. Then run ```bash build.sh```, the compiled pscan.so should appear in ```lbm/pscan_cuda/pscan.so```. You can try to run ```import lbm.pscan_cuda.pscan``` in python to verify if it is correct as follows:
