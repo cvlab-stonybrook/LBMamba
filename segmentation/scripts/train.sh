@@ -1,0 +1,12 @@
+# tiny
+CUDA_VISIBLE_DEVICES=1,2 PYTHONPATH="$(pwd)/..":$PYTHONPATH torchrun --standalone --nnodes=1 --nproc-per-node=2 tools/train.py  configs/lbmamba/uppernet_biVim_tiny_ln_8xb2-160k_ade20k-512x512.py --work-dir /data07/shared/jzhang/result/mamba_bi/vim_IN1k_para/bivim_layerflip/seg_fastvim_ln --cfg-options model.backbone.pretrained_ckpt=/data07/shared/jzhang/result/mamba_bi/vim_IN1k_para/bivim_layerflip/best_checkpoint.pth --launcher 'pytorch' &> /data07/shared/jzhang/result/mamba_bi/vim_IN1k_para/bivim_layerflip/seg_fastvim_ln/log.txt
+
+# small
+CUDA_VISIBLE_DEVICES=0,1 PYTHONPATH="$(pwd)/..":$PYTHONPATH torchrun --standalone --nnodes=1 --nproc-per-node=2 tools/train.py  configs/lbmamba/uppernet_biVim_small_ln_8xb2-160k_ade20k-512x512.py --work-dir /data07/shared/jzhang/result/mamba_bi/vim_IN1k_para/bivim_s_layerflip/seg_fastvim_ln --cfg-options model.backbone.pretrained_ckpt=/data07/shared/jzhang/result/mamba_bi/vim_IN1k_para/bivim_s_layerflip/best_checkpoint.pth --launcher 'pytorch' &> /data07/shared/jzhang/result/mamba_bi/vim_IN1k_para/bivim_s_layerflip/seg_fastvim_ln/log.txt
+
+# 528 qkv
+mkdir /home/jingwezhang/result/bivim/vim_IN1k_para/bivim_528_layerflip_atthead_qkv/seg_fastvim_ln
+PYTHONPATH="$(pwd)/..":$PYTHONPATH torchrun --standalone --nnodes=1 --nproc-per-node=2 tools/train.py  configs/lbmamba/uppernet_biVim_528_ln_8xb2-160k_ade20k-512x512.py --work-dir /home/jingwezhang/result/bivim/vim_IN1k_para/bivim_528_layerflip_atthead_qkv/seg_fastvim_ln --cfg-options model.backbone.pretrained_ckpt=/home/jingwezhang/result/bivim/vim_IN1k_para/bivim_528_layerflip_atthead_qkv/best_checkpoint.pth --launcher 'pytorch' &> /home/jingwezhang/result/bivim/vim_IN1k_para/bivim_528_layerflip_atthead_qkv/seg_fastvim_ln/log.txt
+
+# 300
+CUDA_VISIBLE_DEVICES=0,1 PYTHONPATH="$(pwd)/..":$PYTHONPATH torchrun --standalone --nnodes=1 --nproc-per-node=2 tools/train.py  configs/lbmamba/uppernet_biVim_300_ln_8xb2-160k_ade20k-512x512.py --work-dir /data07/shared/jzhang/result/mamba_bi/vim_IN1k_para/bivim_300_layerflip/seg_fastvim_ln --cfg-options model.backbone.pretrained_ckpt=/data07/shared/jzhang/result/mamba_bi/vim_IN1k_para/bivim_300_layerflip/best_checkpoint.pth --launcher 'pytorch' &> /data07/shared/jzhang/result/mamba_bi/vim_IN1k_para/bivim_300_layerflip/seg_fastvim_ln/log.txt

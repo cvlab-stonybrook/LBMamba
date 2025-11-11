@@ -1,0 +1,2 @@
+# bivim tiny w.o. rope rms ***********
+PYTHONPATH="$(pwd)/..":$PYTHONPATH torchrun --standalone --nnodes=1 --nproc-per-node=8 tools/train.py  configs/lbmamba/vitdet_cascade_mask-rcnn_bivim_tiny_norope_rms_lsj-300e.py --work-dir /home/jingwezhang/result/bivim/vim_IN1k_para/bivim_layerflip/det_norope_rms_bs32 --cfg-options model.backbone.pretrained_ckpt=/home/jingwezhang/result/bivim/vim_IN1k_para/bivim_layerflip/best_checkpoint.pth train_dataloader.batch_size=4 --launcher 'pytorch' &> /home/jingwezhang/result/bivim/vim_IN1k_para/bivim_layerflip/det_norope_rms_bs32/log.txt
