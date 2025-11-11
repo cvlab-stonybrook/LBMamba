@@ -43,7 +43,7 @@ Note that if use used some pretty new GPUs, e.g. H100, you need to change the ``
 
 ## Training
 Please refer to our training scripts in [classification/scripts/train.sh](classification/scripts/train.sh). For more usage, please refer to the [Vim](https://github.com/hustvl/Vim) repo.
-Our pretrained weights can be downloaded [here]().
+Our pretrained weights can be downloaded [here](https://github.com/cvlab-stonybrook/LBMamba/releases/tag/v1.0).
 
 ## Contact
 If you have any questions or concerns, feel free to report an issue or directly contact us at Jingwei Zhang <jingwezhang@cs.stonybrook.edu> and Xi Han <xihan1@cs.stonybrook.edu>. 
