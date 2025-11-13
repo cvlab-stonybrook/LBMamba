@@ -46,7 +46,7 @@ Please refer to our training scripts in [classification/scripts/train.sh](classi
 Our pretrained weights can be downloaded [here](https://github.com/cvlab-stonybrook/LBMamba/releases/tag/v1.0).
 
 ## Contact
-If you have any questions or concerns, feel free to report an issue or contact us directly at **Jingwei Zhang** <jingwezhang@cs.stonybrook.edu> and **Xi Han** <xihan1@cs.stonybrook.edu>. 
+If you have any questions or concerns, feel free to report an issue or contact us directly at Jingwei Zhang <jingwezhang@cs.stonybrook.edu> and Xi Han <xihan1@cs.stonybrook.edu>. 
 
 ## Acknowledgments
 Our framework is based on [Vim](https://github.com/hustvl/Vim), [LocalMamba](https://github.com/hunto/LocalMamba), [mamba.py](https://github.com/alxndrTL/mamba.py) and [2DMamba](https://github.com/AtlasAnalyticsLab/2DMamba/). Thanks for their outstanding code.
